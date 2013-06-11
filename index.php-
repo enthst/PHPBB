@@ -1,0 +1,7 @@
+<?php 
+if($_SERVER['REMOTE_ADDR']=='194.159.155.2'){
+	die();
+} else {
+	header("Location: /board");
+}
+?>

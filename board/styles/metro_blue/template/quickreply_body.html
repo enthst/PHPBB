@@ -1,0 +1,121 @@
+<!-- IF S_QR_ACTIVE and not S_QUICK_REPLY -->
+<script type="text/javascript">
+// <![CDATA[
+var	LA_TOO_FEW_CHARS 		= '{L_TOO_FEW_CHARS}';
+var LA_NO_TEXT_SELECTED		= '{L_NO_TEXT_SELECTED}';
+var	CONFIG_QR_MIN_CHAR		= '{QR_MIN_CHAR_CONFIG}';
+var	form_name 				= 'postform';
+var	text_name 				= 'message';
+var	in_quick_reply			= true;
+// ]]>
+</script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/quickreply_editor.js"></script>
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/editor.js"></script>
+
+<form action="{S_QR_POST_ACTION}" method="post" id="postform" name="postform" onsubmit="return checkQuickForm(this)">
+<table class="tablebg" width="100%" cellspacing="1">
+<tr>
+	<th colspan="2"><b>{L_POST_REPLY}</b></th>
+</tr>
+
+<!-- IF not S_USER_LOGGED_IN -->
+	<tr>
+		<td class="row1"><b class="genmed">{L_USERNAME}:</b></td>
+		<td class="row2"><input type="text" tabindex="1" name="username" id="username" size="25" /></td>
+	</tr>
+				<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+					<!-- DEFINE $CAPTCHA_TAB_INDEX = 3 -->
+					<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+				<!-- ENDIF -->	
+<!-- ENDIF -->
+<!-- IF S_QR_SUBJECT -->
+<tr>
+	<td class="row1" width="22%"><b class="genmed">{L_SUBJECT}:</b></td>
+	<td class="row2" width="78%"><input class="post" style="width:450px" type="text" name="subject" size="45" maxlength="64" tabindex="2" value="{QR_SUBJECT}" /></td>
+</tr>
+<!-- ELSE -->
+		<input type="hidden" name="subject" value="{QR_SUBJECT}" />
+<!-- ENDIF -->
+<tr>
+	<td class="row1" valign="top"><b class="genmed">{L_MESSAGE}:</b><br />
+	<!-- IF S_SMILIES_ALLOWED -->
+		<table width="100%" cellspacing="5" cellpadding="0" border="0" align="center">
+		<tr>
+			<td class="gensmall" align="center"><b>{L_SMILIES}</b></td>
+		</tr>
+		<tr>
+			<td align="center">
+				<!-- BEGIN smiley -->
+					<a href="#" onclick="insert_text('{smiley.A_SMILEY_CODE}', true); return false;" style="line-height: 20px;"><img src="{smiley.SMILEY_IMG}" width="{smiley.SMILEY_WIDTH}" height="{smiley.SMILEY_HEIGHT}" alt="{smiley.SMILEY_CODE}" title="{smiley.SMILEY_DESC}" hspace="2" vspace="2" /></a>
+				<!-- END smiley -->
+			</td>
+		</tr>
+
+		<!-- IF S_SHOW_SMILEY_LINK -->
+			<tr>
+				<td align="center"><a class="nav" href="{U_MORE_SMILIES}" onclick="popup(this.href, 300, 350, '_phpbbsmilies'); return false;">{L_MORE_SMILIES}</a></td>
+			</tr>
+		<!-- ENDIF -->
+
+		</table>
+	<!-- ENDIF -->
+	</td>
+	<td class="row2" valign="top">
+		<script type="text/javascript">
+		// <![CDATA[
+			var form_name = 'postform';
+			var text_name = 'message';
+		// ]]>
+		</script>
+
+		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<!-- IF S_QR_BBCODE_BOX_ACTIVE -->
+			<!-- INCLUDE posting_buttons.html -->
+		<!-- ENDIF -->
+		<tr>
+			<td valign="top" style="width: 100%;">
+			<textarea name="message" rows="15" cols="76" tabindex="4" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" style="width: 700px; height: 270px; min-width: 98%; max-width: 98%;"></textarea></td>
+			<!-- IF S_BBCODE_ALLOWED and S_QR_BBCODE_BOX_ACTIVE -->
+			<td width="80" align="center" valign="top">
+				<script type="text/javascript">
+				// <![CDATA[
+					colorPalette('v', 7, 6)
+				// ]]>
+				</script>
+			</td>
+			<!-- ENDIF -->
+	 	</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td class="row1" valign="top" colspan="2"><br />
+	<table cellpadding="1">
+		<!-- IF S_QR_ATTACH_SIG -->
+		<tr><td class="gen"><input type="checkbox" class="radio" name="attach_sig" id="attach_sig"{S_QR_SIGNATURE_CHECKED} /> {L_ATTACH_SIG}</td></tr>
+		<!-- ENDIF -->
+		<!-- IF S_QR_QUOTE_LAST -->
+		<tr><td class="gen"><input type="checkbox" class="radio" name="quote_last_msg" id="quote_last_msg" /> {L_QUOTE_LAST_POST}</td></tr>
+		<!-- ENDIF -->	
+		<!-- IF S_QR_NOTIFY -->
+		<tr><td class="gen"><input type="checkbox" class="radio" name="notify" id="notify"{S_QR_NOTIFY_CHECKED} /> {L_NOTIFY_REPLY}</td></tr>
+		<!-- ENDIF -->
+		<tr><td><a href="#" onclick="quoteSelection(); return false;">{L_QUOTE_SELECTED}</a></td></tr>
+	</table>
+	</td>
+</tr>
+
+<tr>
+	<td class="cat" colspan="2" align="center">
+		{S_QR_HIDDEN_FIELDS}
+		{S_FORM_TOKEN}
+		<input type='hidden' name='last_post' value='{S_QR_LAST_POST}' />
+		<input type="submit" class="btnlite" tabindex="5" name="preview" value="{L_PREVIEW}" />&nbsp;
+		<input type="submit" class="btnmain" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" />
+	</td>
+</tr>
+</table>
+	
+	</form>
+<!-- ENDIF -->

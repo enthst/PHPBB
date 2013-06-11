@@ -1,0 +1,332 @@
+.cat h4{
+	background: #42a6de;
+	padding: 16px 0 16px 11px;
+	font-size:14px;
+	color:#fff;
+}
+#mChatData{
+	overflow: auto;
+}
+div.mChatBG1 {
+	background-color: #FBFBFB;
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px dotted #DDDDDD;
+	overflow: hidden;
+}
+
+div.mChatBG2 {
+	background-color: #FFFFFF;
+	padding: 5px 5px 5px 5px;
+	border-bottom: 1px dotted #DDDDDD;
+	overflow: hidden;
+}
+
+div.mChatRowLimit {
+	overflow: auto;
+	width: 100%;	
+}
+
+div.mChatRowLimitCustom {
+	overflow: auto;
+	width: 100%;
+}
+
+div.mChatPanel {
+	text-align: left;
+	padding: 3px;
+	clear: both;
+}
+
+input.mChatText {
+	cursor: text;
+	min-width:40%;
+	max-width:40%;
+	border: 1px solid #A9B8C2;
+	color: #000000;
+	padding: 3px 5px 3px 5px;
+	margin: 3px 0px 3px 5px;
+}
+
+input.mChatText:hover {
+	border-color: #11A3EA;
+}
+
+div.mChatHover:hover {
+	background-color: #FEFAC0;
+}
+
+.mChatBodyFix {
+	width: 100% !important;
+	background-color: #fff !important;
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+div.mChatStatic {
+	padding-left: 5px;
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	text-align: left;
+	font-size: 1.1em;
+}
+
+div.mChatStats {
+	padding-left: 5px;
+	margin-top: 2px;
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	text-align: left;
+	min-height: 1.3em;
+	font-size: 1.1em;
+	height: auto !important;
+}
+
+div.mChatRefresh {
+	padding-left: 5px;
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	text-align: left;
+	font-size: 1.1em;
+	margin-top: 1.5em;
+	clear: both;
+}
+
+input.mChatColor {
+	width: 100%;
+	text-align: center;
+	background-color: #DEE3E7;
+	border-style: none;	
+}
+
+div.mChatMessage {
+	padding: 3px;
+	font-size: 1.1em;
+	width: 98%;
+}
+
+a.mChatScriptLink {
+	text-decoration:none;
+}
+
+img.mChatImage{
+	vertical-align: middle;
+}
+
+img.mChatImageLoad {
+	vertical-align: middle;
+	cursor: wait;
+	display: none;
+}
+
+img.mChatImageOk {
+	vertical-align: middle;
+	cursor: help;
+}
+
+img.mChatImageHideImg {
+	vertical-align: middle; 
+	cursor: help; 
+	display: none;
+}
+
+div.mChatSound {
+	position: absolute;
+	left: -1000px;
+	top: -1000px;
+}
+
+.mchat_alert {
+	color: #7E2217;
+	padding: 10px;
+}
+
+#mChatUserList {
+	display: none;
+	float: left;
+}
+
+.mChatAvatars {
+	float: left;
+	padding-right: 5px;
+}
+
+div.avatarMessage {
+	margin-left: 50px;
+	width: 90%;
+	margin-right: 5px;
+}
+.mChatText{
+	float:left;
+	margin-right:10px !important;
+}
+.btnlite{
+	background: #8a8a8a;
+	border-color: #707070;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	padding:4px 10px;
+	float:left;
+	margin-right:5px;
+	border-width:1px;
+	border-style:solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.btnlite:hover{
+	background:#9f9f9f;
+}
+#submit_button{
+	background:#A61515;
+	border-color:#880000;
+}
+#submit_button:hover{
+	background:#be2626;
+}
+.topiclistTitle a{
+	font-weight:bold !important;
+}
+
+
+#header li#donate-link a {
+	background-image: url("/board/styles/metro_blue/imageset/tab-icon-donate.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: left top;	
+}
+#header li#create-link a {
+	background-image: url("/board/styles/metro_blue/imageset/tab-icon-create.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: left top;	
+}
+
+.ui-resizable-s {
+    bottom: 0;
+    height: 10px;
+    background: #DBE2EC;
+}
+.mChatOpts{
+	float:right;
+	position: relative;
+	margin-top:-40px;
+}
+.mChatOpts span{
+	font-size: 24px;
+	color: #fff;
+	font-weight:bold;
+	margin:0 5px;
+	cursor:pointer;
+}
+.cat, .cat h4, .cat .mChatOpts{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* proSilver Content Styles for MOD Thanks
+---------------------------------------- */
+
+dl.thanks {
+	min-height: 35px;
+	background-position: 10px 50%;		/* Position of folder icon */
+	background-repeat: no-repeat;
+}
+
+dl.thanks dt {
+	padding-left: 45px;					/* Space for folder icon */
+	background-repeat: no-repeat;
+	background-position: 5px 95%;		/* Position of topic icon */
+	width: 45%;
+}
+
+dd.lastpostthanks {
+	width: auto;
+	font-size: 1.1em;
+}
+dd.lastpostthanks span {
+	display: block;
+	padding-left: 5px;
+}
+/* List in forum description */
+dl.thanks dt ol,
+dl.thanks dt ul {
+	list-style-position: inside;
+	margin-left: 1em;
+}
+
+dl.thanks dt li {
+	display: list-item;
+	list-style-type: inherit;
+}
+li.header dl.thanks {
+	min-height: 0;
+}
+
+li.header dl.thanks dt {
+	/* Tweak for headers alignment when folder icon used */
+	padding-left: 0;
+	padding-right: 50px;
+}
+
+/* Forum list column styles */
+dl.thanks {
+	min-height: 35px;
+	background-position: 10px 50%;		/* Position of folder icon */
+	background-repeat: no-repeat;
+}
+
+dl.thanks dt {
+	padding-left: 45px;					/* Space for folder icon */
+	background-repeat: no-repeat;
+	background-position: 5px 95%;		/* Position of topic icon */
+}
+/* Icon images
+---------------------------------------- */
+.icon-thanks, .icon-thanks_toplist {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding: 1px 0 0 17px;
+}
+
+.icon-thanks					{ background-image: url("/board/styles/metro_blue/theme/images/icon_thanks.gif"); }
+.icon-thanks_toplist			{ background-image: url("/board/styles/metro_blue/theme/images/icon_thanks_toplist.gif"); }
+
+/* Set profile icon dimensions */
+ul.profile-icons li.thanks-icon	{ width:60px; height: 20px; }
+ul.profile-icons li.removethanks-icon	{ width:60px; height: 20px; }
+/* Profile & navigation icons */
+.thanks-icon, .thanks-icon a		{ background-image: url("/board/styles/metro_blue/imageset/en/button_give_thanks.png"); }
+.removethanks-icon, .removethanks-icon a	{ background-image: url("/board/styles/metro_blue/imageset/en/button_remove_thanks.png"); }
+
+.facebook-icon, .facebook-icon a {
+background-image: url("/board/styles/metro_blue/imageset/icon_contact_facebook.png");
+background-position: center top;
+width:20px;
+height:20px;
+}
+.content img{
+	border:0px solid #fff;
+}
+
+.welcome-message{
+	font-size:16px !important; 
+	line-height:24px !important;
+	padding:10px;
+	margin-bottom:20px;
+}
+.staff-pick{
+	background: url(/board/styles/metro_blue/imageset/staff-pick.jpg);
+	width:250px;
+	height:220px;
+	margin-top:1px;
+	border:0px solid #ccc;
+}
+.staff-pick a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
